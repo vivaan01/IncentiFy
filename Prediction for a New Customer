@@ -1,0 +1,9 @@
+# Example customer data
+new_customer = np.array([[5, 3000, 75, 10]])  # [order_count, total_spend, engagement_score, last_incentive]
+
+# Scale the data
+new_customer_scaled = scaler.transform(new_customer)
+
+# Predict the incentive
+predicted_incentive = model.predict(new_customer_scaled)
+print(f'Predicted Incentive: {predicted_incentive[0]}')
